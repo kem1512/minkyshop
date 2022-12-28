@@ -1,1 +1,87 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&display=swap');
+
+* {
+    font-family: 'Noto Sans', sans-serif;
+}
+
+ul.nav a:hover {
+    background-color: whitesmoke !important;
+}
+
+.nav-end>button:hover {
+    background-color: whitesmoke !important;
+}
+
+a.dropdown-item:focus {
+    background-color: rgb(240, 237, 237);
+    color: black;
+}
+
+#btn-cart-bottom:hover {
+    background-color: whitesmoke !important;
+}
+
+#card-category:hover>div {
+    opacity: 1;
+    display: block;
+    animation: BottomToTop 0.5s;
+}
+
+#card-category > div{
+    bottom: 0;
+    opacity: 0;
+    animation: TopToBottom 0.5s;
+}
+
+#card-category>div>button:hover {
+    background-color: black;
+    color: white;
+}
+
+@keyframes FadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes FadeOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes BottomToTop {
+    from {
+        opacity: 0;
+        bottom: -8%;
+    }
+
+    to {
+        opacity: 1;
+        bottom: 0;
+    }
+}
+
+@keyframes TopToBottom {
+    from {
+        opacity: 1;
+        bottom: 0;
+    }
+
+    to {
+        opacity: 0;
+        bottom: -8%;
+    }
+}
+
+.dropdown-menu {
+    animation: FadeIn 0.5s;
+}

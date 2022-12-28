@@ -1,0 +1,146 @@
+<header
+    class="navbar navbar-expand-xl d-flex flex-wrap align-items-center justify-content-md-between py-3 mb-4">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-expanded="false">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none" href="/">
+        <img src="https://chisnghiax.com/ciseco/static/media/logo.95d47bbac8db6c1e8f997bbf26ca05cf.svg" class="img-fluid">
+    </a>
+
+    <div>
+        <div class="d-none d-xl-block">
+            <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+                <li><a class="nav-link px-3 link-dark rounded-4" href="#">Trang chủ</a></li>
+                <li><a class="nav-link px-3 link-dark rounded-4" href="#">Sản phẩm</a></li>
+                <li><a class="nav-link px-3 link-dark rounded-4" href="#">Quần áo</a></li>
+                <li><a class="nav-link px-3 link-dark rounded-4" href="#">Sneaker</a></li>
+                <li><a class="nav-link px-3 link-dark rounded-4" href="#">Minky</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="col-md-3 text-end nav-end">
+        <button class="btn rounded-5 border-0" type="button">
+            <i class="fa-regular fa-magnifying-glass fs-5 p-1"></i>
+        </button>
+        <button class="btn border-0 rounded-5" data-bs-toggle="dropdown" data-bs-auto-close="outside" role="button">
+            <i class="fa-regular fa-user fs-5 p-1"></i>
+        </button>
+        <ul class="dropdown-menu dropdown-menu-end mt-3 rounded-5 border-0 shadow">
+            <div class="p-2">
+                <li>
+                    <a class="dropdown-item py-2 rounded-3" href="#">
+                        <i class="fa-regular fa-user me-3"></i>Tài khoản của tôi
+                    </a>
+                </li>
+                <li>
+                    <a class="dropdown-item py-2 rounded-3" href="#">
+                        <i class="fa-regular fa-note me-3"></i>Đơn hàng của tôi
+                    </a>
+                </li>
+                <li>
+                    <a class="dropdown-item py-2 rounded-3" href="#">
+                        <i class="fa-regular fa-heart me-3"></i>Sản phẩm yêu thích
+                    </a>
+                </li>
+                <li>
+                    <hr class="dropdown-divider">
+                </li>
+                <li>
+                    <a class="dropdown-item py-2 rounded-3" href="#">
+                        <i class="fa-regular fa-arrow-right-from-bracket me-3"></i>Đăng xuất
+                    </a>
+                </li>
+            </div>
+        </ul>
+        <button class="btn border-0 position-relative rounded-5" type="button" data-bs-auto-close="outside"
+            data-bs-toggle="dropdown">
+            <i class="fa-regular fa-cart-shopping fs-5 p-1"></i>
+            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                99+
+            </span>
+        </button>
+
+        <!-- cart -->
+        <ul class="dropdown-menu dropdown-menu-end mt-3 rounded-5 border-0 shadow">
+            <div class="p-2">
+                <div class="card border-0" style="width: 30rem;">
+                    <div class="card-body">
+                        <h5 class="card-title mb-3">Giỏ hàng</h5>
+                        <div class="row">
+                            <div class="col-12 d-flex justify-content-between">
+                                <div class="row align-items-center">
+                                    <div class="col-3">
+                                        <img src="https://chisnghiax.com/ciseco/static/media/17.7701cf9446a6b588de67.png"
+                                            class="img-fluid bg-secondary rounded-4 bg-opacity-10" alt="">
+                                    </div>
+                                    <div class="col-6">
+                                        <p>Rey Nylon Backpack</p>
+                                        <p class="text-muted">XL - Xanh - Japan</p>
+                                        <p style="font-size: 14px;">Số lượng : 1</p>
+                                    </div>
+                                    <div class="col-3">
+                                        <div
+                                            class="text-success border border-success rounded-3 border-2 p-2 text-center">
+                                            $42.00</div>
+                                        <a href="#" class="btn text-danger border-0">Remove</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                    </div>
+                </div>
+
+                <!-- total -->
+                <div class="card border-0" style="width: 30rem;">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-12 d-flex justify-content-between">
+                                <div class="row align-items-center">
+                                    <div class="col-3">
+                                        <img src="https://chisnghiax.com/ciseco/static/media/17.7701cf9446a6b588de67.png"
+                                            class="img-fluid bg-secondary rounded-4 bg-opacity-10" alt="">
+                                    </div>
+                                    <div class="col-6">
+                                        <p>Rey Nylon Backpack</p>
+                                        <p class="text-muted">XL - Xanh - Japan</p>
+                                        <p style="font-size: 14px;">Số lượng : 1</p>
+                                    </div>
+                                    <div class="col-3">
+                                        <div
+                                            class="text-success border border-success rounded-3 border-2 p-2 text-center">
+                                            $42.00</div>
+                                        <a href="#" class="btn text-danger border-0">Remove</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- total -->
+
+                <div class="card border-0" style="width: 30rem;" id="cart-bottom">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-12">
+                                <p>Tổng tiền : $200.00</p>
+                            </div>
+                            <div class="col-12 d-flex justify-content-between">
+                                <div class="px-5 py-3 rounded-5 shadow me-3 text-nowrap" id="btn-cart-bottom">
+                                    <a class="btn w-100 fw-semibold border-0">Xem giỏ hàng</a>
+                                </div>
+
+                                <div class="px-5 py-3 bg-dark rounded-5 shadow text-nowrap">
+                                    <a class="btn text-light fw-semibold border-0">Thanh toán</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </ul>
+        <!-- cart -->
+    </div>
+</header>
