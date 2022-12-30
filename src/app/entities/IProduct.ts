@@ -3,6 +3,6 @@ export interface IProduct{
     name:string,
     image:string,
     price:number,
-    color:object,
-    size:object
+    colors:[],
+    sizes:[]
 }

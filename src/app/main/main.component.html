@@ -1,35 +1,28 @@
-<main>
+<app-header [carts]="carts" (removeCart)="RemoveCart($event)" [totalMoney]="totalMoney"
+    (searchingProduct)="SearchProduct($event)"></app-header>
+
+<main *ngIf="products">
     <div>
         <div class="row g-4">
-            <div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-3" *ngFor="let product of products">
+            <div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-3" *ngFor="let product of products" id="cardProduct">
                 <div class="card border-0">
                     <div class="position-relative" id="card-category">
-                        <img src="https://chisnghiax.com/ciseco/static/media/5.9ddc0dff360795c6f5b5.png"
-                            class="card-img-top shadow rounded-5 py-4" alt="...">
+                        <img src="{{product.image}}" class="card-img-top shadow rounded-5 py-4" alt="...">
                         <div class="position-absolute start-50 translate-middle-x mb-4">
-                            <button class="btn shadow me-1">S</button>
-                            <button class="btn shadow me-1">XL</button>
-                            <button class="btn shadow me-1">XS</button>
+                            <button class="btn shadow me-1" (click)="AddCart(product.id)">Add To Cart</button>
                         </div>
                     </div>
                     <div class="card-body">
                         <div class="pb-3">
-                            <button class="btn btn-primary rounded-circle me-1"
-                                style="width: 25px; height: 25px;"></button>
-                            <button class="btn btn-danger rounded-circle me-1"
-                                style="width: 25px; height: 25px;"></button>
-                            <button class="btn btn-dark rounded-circle me-1"
-                                style="width: 25px; height: 25px;"></button>
-                            <button class="btn btn-success rounded-circle me-1"
-                                style="width: 25px; height: 25px;"></button>
-                            <button class="btn btn-warning rounded-circle me-1"
-                                style="width: 25px; height: 25px;"></button>
+                            <button class="btn btn-primary rounded-circle me-1 border-0"
+                                style="width: 25px; height: 25px;" [ngStyle]="{background: color}"
+                                *ngFor="let color of product.colors"></button>
                         </div>
                         <p class="card-title">{{product.name}}</p>
                         <p class="card-text text-muted">XL - Xanh - Japan</p>
                         <div class="d-flex justify-content-between align-items-center">
                             <div class="text-success border border-success rounded-3 border-2 p-2">
-                                $42.00</div>
+                                ${{product.price}}</div>
                             <div class="fs-6">
                                 <i class="fa-solid fa-star text-warning me-2"></i>4.2 (50 review)
                             </div>
@@ -41,3 +34,10 @@
     </div>
     <hr>
 </main>
+
+
+<div class="d-flex justify-content-center" *ngIf="!products">
+    <div class="spinner-border" role="status">
+        <span class="visually-hidden">Loading...</span>
+    </div>
+</div>

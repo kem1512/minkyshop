@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http'
 import { IProduct } from './entities/IProduct'
+import { ICart } from './entities/ICart'
 
 @Injectable({
   providedIn: 'root'
@@ -23,5 +24,9 @@ export class PostService {
 
   deleteProduct(){
     return this.httpService.delete(this.url + 1)
+  }
+
+  addToSession(carts:ICart[]){
+    sessionStorage.setItem("myCart", JSON.stringify(carts)) 
   }
 }

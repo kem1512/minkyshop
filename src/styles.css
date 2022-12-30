@@ -85,3 +85,7 @@ a.dropdown-item:focus {
 .dropdown-menu {
     animation: FadeIn 0.5s;
 }
+
+#cardProduct{
+    animation: FadeIn 1s;
+}
